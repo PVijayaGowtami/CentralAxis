@@ -3,7 +3,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
-// Dropdown data with route paths
+
+// Dropdown data
 const dropdowns = {
   'Data Center Infrastructure Management': [
     { name: 'Monitoring Devices', path: '/monitoring-devices' },
@@ -47,13 +48,16 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
+  // ✅ Place console.logs here — inside the function, but **before** return
+  console.log('Dropdown data:', dropdowns);
+  console.log('Open dropdown:', openDropdown);
+  console.log('Is open:', isOpen);
+
   return (
     <header className="w-full flex justify-between items-center px-6 py-4 bg-transparent relative z-50">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <Image src="/assets/axis.jpg" alt="Logo" width={40} height={40} />console.log('Dropdown data:', dropdowns);
-console.log('Open dropdown:', openDropdown);
-console.log('Is open:', isOpen);
+        <Image src="/assets/axis.jpg" alt="Logo" width={40} height={40} />
         <span className="text-xl font-bold text-white">Central Axis</span>
       </div>
 
