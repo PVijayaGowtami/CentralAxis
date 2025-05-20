@@ -45,7 +45,7 @@ const dropdowns = {
 };
 
 export default function Header() {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   // ✅ Place console.logs here — inside the function, but **before** return
